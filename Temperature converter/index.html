@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form>
+
+    <h1>Conversor de medidas</h1>
+    <input type="number" id="texto" value="0"><br>
+
+    <input type="radio" id="CF" name="unit">
+    <label for="CF">Celcius para Fahrenheit</label><br>
+    <input type="radio" id="FC" name="unit">
+    <label for="FC">Fahrenheit para Celcius</label><br>
+ 
+    <button type="button" id="btn" onclick="converter()">Converter</button>
+
+    <p id="result">Selecione uma das opções</p>
+</form>
+
+<script src="index.js"></script>
+</body>
+</html>

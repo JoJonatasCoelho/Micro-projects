@@ -1,0 +1,42 @@
+body{
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    box-shadow: 10px 10px 15px hsla(240, 100%, 50%, 0.312);
+    padding: 20px 10px;
+}
+#texto{
+    text-align: center;
+    width: 40px;
+    margin: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btn{
+    border: none;
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: background-color;
+}
+
+#btn:hover{
+    background-color: rgb(80, 80, 245);
+    text-shadow: 2px 2px 2px white;
+    cursor: pointer;
+}
+
