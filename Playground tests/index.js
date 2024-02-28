@@ -1,45 +1,50 @@
-function generatePassword(length, lowercase, uppercase, numbers, symbols){
-    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
-    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    const numbersChars = "0123456789";
-    const symbolsChars = "!@#$%¨&*()-_=+";
+const person = {
+    firstName: "Spongebob",
+    lastName: "Squarepants",
+    age: 30,
+    isEmployed: true,
 
+    sayHello: function(){ console.log(`Hi! i'm ${this.firstName}`)},
+    objeto: function(){console.log(this)},
+}
+const person2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployed: false,
     
-    let allowedChars = "";
-    let password = "";
-
-    allowedChars += includeLowercase ? lowercaseChars : "";
-    allowedChars += includeUppercase ? uppercaseChars : "";
-    allowedChars += includeNumbers ? numbersChars : "";
-    allowedChars += includeSymbols ? symbolsChars : "";
-
-    if(length <= 0){
-        return "(password length must be at least 1"
-    }
-    if(allowedChars,length === 0){
-        return "(At least 1 set of character need to be selected)"
+    sayHello: () => { console.log(`Hi! i'm ${this.firstName}`)},
+}
+class produto{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
     }
 
-    for (let i = 0; i < length; i++){
-        const randomIndex = Math.floor(Math.random() * allowedChars.length)
-        password += allowedChars[randomIndex];
+    displayProduct(){
+        console.log(this.name);
+        console.log("$" + this.price.toFixed(2));
     }
 
-    console.log(allowedChars)
+    leva2(price){
+        price = this.price
+        return price*2;
+    }
 
-    return password;
+    static leva2(price){
+        return price*2
+    }
 }
 
-const passwordLength = 12;
-const includeLowercase = true;
-const includeUppercase = true;
-const includeNumbers = true;
-const includeSymbols = true;
 
-const password = generatePassword(passwordLength, 
-                                    includeLowercase,
-                                    includeUppercase,
-                                    includeNumbers,
-                                     includeSymbols)
+person.sayHello();
+person2.sayHello(); 
+person.objeto();
+let ew = {nome:"as", metodo: function(){console.log("essa porra é um objeto ou um dicionario")}}
 
-console.log(`Gererate password: ${password}`)
+let produto1 = new produto("Calças", 50.22)
+ew.metodo();        
+produto1.displayProduct();
+console.log(produto.leva2(55.22));
+
+console.log(produto1.leva2(55.22));
